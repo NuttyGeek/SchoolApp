@@ -1,0 +1,9 @@
+<h1 class="title">School App</h1>
+
+<form class="center" [formGroup]="loginForm" (ngSubmit)="login($event)">
+  <label for="email">Your Email</label><br>
+  <input type="email" formControlName="email" id="email" name="email"><br>
+  <label for="password">Your Password</label><br>
+  <input type="password" formControlName="password" id="password" name="password"><br>
+  <button >Login</button>
+</form>
