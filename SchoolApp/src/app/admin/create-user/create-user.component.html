@@ -1,0 +1,52 @@
+<p>create-user works!</p>
+<h2 class="mat-display-1" style="text-align: center;">Create User</h2>
+<div class="card-wrapper">
+  <mat-card class="full-height" class="card">
+    <!-- make a form for creating users  -->
+    <form [formGroup]="userForm" (ngSubmit)="submit()">
+      <div class="container">
+        <mat-form-field>
+          <input matInput formControlName="name" name="name" placeholder="Name" required/>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput formControlName="email" type="email" name="email" placeholder="Email" required/>
+        </mat-form-field>
+        <mat-form-field hintLabel="Atleast 6 letters">
+          <input matInput formControlName="password" name="password" maxlength="15" placeholder="Password" required/>
+        </mat-form-field>
+      </div>
+      <br />
+      <mat-radio-group
+        [required]="true"
+        #radioGroup
+        aria-label="Profile"
+        (change)="changeProfile($event)"
+        class="radio-buttons"
+      >
+        <mat-radio-button value="student">Student</mat-radio-button>
+        <mat-radio-button value="teacher">Teacher</mat-radio-button>
+        <mat-radio-button value="librarian">Librarian</mat-radio-button>
+      </mat-radio-group>
+      <br /><br />
+      <!-- if student is click show -->
+      <div [ngClass]="{ hide: profile != 'student' }" id="student-options">
+        <div class="container">
+          <mat-form-field>
+            <input matInput formControlName="rollno" name="rollno" maxlength="10" placeholder="Rollno" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput formControlName="class" name="class" maxlength="10" placeholder="Class" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div [ngClass]="{ hide: profile != 'teacher' }" id="parent-options">
+        <div class="container">
+          <mat-form-field>
+            <input matInput formControlname="designation" name="designation" placeholder="Designation" />
+          </mat-form-field>
+        </div>
+      </div>
+      <button mat-raised-button color="primary">Create User</button>
+    </form>
+  </mat-card>
+</div>

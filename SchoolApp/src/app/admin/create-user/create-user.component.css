@@ -1,0 +1,33 @@
+.card{
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card-wrapper{
+  margin: 20px;
+}
+
+input{
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.container > *{
+  width: 100%;
+}
+
+.radio-buttons > *{
+  padding: 10px;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
+}
