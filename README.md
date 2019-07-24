@@ -41,3 +41,9 @@ This application is an Angular Website for School ERP
 6. view books
 7. attendance
 8. view events
+
+
+# NOTE: Admin Credentials
+
+username: admin@school.com
+password: admin@007
