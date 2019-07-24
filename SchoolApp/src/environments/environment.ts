@@ -4,13 +4,13 @@
 
 export const environment = {
   firebase : {
-    apiKey: "AIzaSyDMoGI0HLqcUcRP_oUrCRIT-jglASGrRwA",
-    authDomain: "schoolapp-5fd76.firebaseapp.com",
-    databaseURL: "https://schoolapp-5fd76.firebaseio.com",
-    projectId: "schoolapp-5fd76",
+    apiKey: "AIzaSyA154tAype2eHhlrES6IDinRPUWgK_VmBc",
+    authDomain: "schoolapp-8f7a1.firebaseapp.com",
+    databaseURL: "https://schoolapp-8f7a1.firebaseio.com",
+    projectId: "schoolapp-8f7a1",
     storageBucket: "",
-    messagingSenderId: "432297544065",
-    appId: "1:432297544065:web:a01b5f864a1fd267"
+    messagingSenderId: "1030825112591",
+    appId: "1:1030825112591:web:9d9ae7d6db634f84"
   },
   production: false
 };

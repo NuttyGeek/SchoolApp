@@ -4,11 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 
 
-const routes: Routes = [{
-  path: 'login', component: LoginComponent
-}, {
-  path: '', component: HomeComponent
-}];
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  { path: 'login', component: LoginComponent },
+  {path: 'admin', loadChildren: './admin/admin.module#AdminModule'}
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
