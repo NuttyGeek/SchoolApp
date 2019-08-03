@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RestService {
 
-  URL = "https://us-central1-schoolapp-8f7a1.cloudfunctions.net/createUser";
+  //URL = "https://us-central1-schoolapp-8f7a1.cloudfunctions.net/createUser";
+  URL = "http://localhost:5000/schoolapp-8f7a1/us-central1/createUser";
 
   constructor(private http: HttpClient) {
   }
