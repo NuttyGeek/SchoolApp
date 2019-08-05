@@ -1,1 +1,29 @@
-<p>all-users works!</p>
+<div class="container">
+
+  <div class="spinner-wrapper">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+  </div>
+
+  <div id="button-group">
+      <mat-button-toggle-group name="fontStyle" (change)="changeFilter($event)" aria-label="Font Style">
+          <mat-button-toggle value="all">All Users</mat-button-toggle>
+          <mat-button-toggle value="students">Students</mat-button-toggle>
+          <mat-button-toggle value="teachers">Teachers</mat-button-toggle>
+          <mat-button-toggle value="librarians">Librarian</mat-button-toggle>
+        </mat-button-toggle-group>
+  </div>
+
+  <mat-list>
+    <h3 mat-subheader>{{listTitle}}</h3>
+    <mat-list-item *ngFor="let user of usersShown; let i=index">
+      <mat-icon mat-list-icon>account_circle</mat-icon>
+      <h4 mat-line>{{user.name}} -  {{user.email}}</h4>
+      <p mat-line> {{user.profile}}</p>
+      <button mat-icon-button (click)="deleteUser(user.uid)">
+          <mat-icon>delete</mat-icon>
+      </button>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+

@@ -1,0 +1,33 @@
+<div class="card-wrapper">
+    <mat-spinner *ngIf="loading"></mat-spinner>
+  <mat-card *ngIf="!loading" class="full-height" class="card">
+    <!-- make a form for creating users  -->
+    <form [formGroup]="eventForm" (ngSubmit)="submit()">
+      <div class="container">
+        <mat-form-field>
+          <input matInput formControlName="name" name="name" placeholder="Event Name" required/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput formControlName="location" type="text" name="location" placeholder="Event Location" required/>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" (dateChange)="dateChanged($event)" formControlName="date" name="date"  placeholder="Event Date" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="text" formControlName="time" placeholder="Event Time (24 hour format)" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <textarea formControlName="description" matInput placeholder="Event Description"></textarea>
+        </mat-form-field>
+      </div>
+      <br />
+      <button mat-raised-button color="primary">Create Event</button>
+    </form>
+  </mat-card>
+</div>

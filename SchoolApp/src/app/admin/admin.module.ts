@@ -18,17 +18,25 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { AllUsersComponent } from './all-users/all-users.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastService } from '../toast.service';
+import { SharedModule } from '../shared/shared.module';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { EventsComponent } from './events/events.component';
+import { AllEventsComponent } from './all-events/all-events.component';
+import { BookRequestsComponent } from './book-requests/book-requests.component';
+import { TimetableComponent } from './timetable/timetable.component';
 
 
 @NgModule({
-  declarations: [AdminHomeComponent, MyNavComponent, UsersComponent, AdminDashboardComponent, CreateUserComponent, AllUsersComponent],
+  declarations: [AdminHomeComponent, MyNavComponent, UsersComponent, AdminDashboardComponent, CreateUserComponent, AllUsersComponent, CreateEventComponent, EventsComponent, AllEventsComponent, BookRequestsComponent, TimetableComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     LayoutModule,
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

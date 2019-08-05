@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     if (this.authService.isLoggedIn()){
       //  getting uid of the user
       let uid = this.authService.getUserId();
+      console.log("uid of logged in user: "+uid);
       //  getting profile of user
       this.dbService.getProfile(uid).subscribe((profile: string)=>{
         switch(profile){

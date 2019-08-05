@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <h2>Books Requested by Librarian</h2>
+  <mat-spinner *ngIf="loading"></mat-spinner>
+  <div *ngIf="!loading">
+    <div class="card" *ngFor="let book of requests; let i=index">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{book.name}}</mat-card-title>
+                <mat-card-subtitle>{{book.author}} - {{book.year}}</mat-card-subtitle>
+              </mat-card-header>
+        </mat-card>
+    </div>
+  </div>
+
+  </div>

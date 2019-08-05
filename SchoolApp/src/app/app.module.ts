@@ -24,7 +24,7 @@ import { MaterialModule } from './material/material.module';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
